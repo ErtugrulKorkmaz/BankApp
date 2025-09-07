@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<style>
+    
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa; 
+    }
+
+    
+    .hero-section {
+        background: linear-gradient(45deg, #0052D4, #4364F7, #6FB1FC);
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+
+    .btn-custom {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .btn-primary-custom {
+        background-color: #ffffff;
+        color: #0052D4;
+    }
+
+    .btn-primary-custom:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .features-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .features-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap; 
+    }
+
+    .feature-card {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        flex-basis: 300px; 
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        color: #4364F7;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .feature-card p {
+        color: #6c757d;
+    }
+
+    @@media (max-width: 768px) {
+        .hero-section h1 {
+            font-size: 2.5rem;
+        }
+        .hero-section p {
+            font-size: 1rem;
+        }
+    }
+
+</style>
+
+<div class="hero-section">
+    <h1 class="display-4">BankaWeb</h1>
+    <p>Finansal geleceğinizi güvenle yönetin. Modern, hızlı ve güvenilir bankacılık deneyimi için doğru yerdesiniz.</p>
+    <a href="#" class="btn-custom btn-primary-custom">Hemen Başvur</a>
+</div>
+
+<section class="features-section">
+    <h2 class="section-title">Sunduğumuz Hizmetler</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-wallet"></i> <span>&#128181;</span>
+            </div>
+            <h3>Hesap Yönetimi</h3>
+            <p>Tüm hesaplarınızı tek bir ekrandan kolayca görüntüleyin ve yönetin.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <span>&#128184;</span>
+            </div>
+            <h3>Hızlı Para Transferi</h3>
+            <p>7/24 kesintisiz ve güvenli bir şekilde EFT ve Havale işlemlerinizi yapın.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <span>&#128179;</span>
+            </div>
+            <h3>Kredi Başvuruları</h3>
+            <p>İhtiyaçlarınıza en uygun kredi seçeneklerini inceleyin ve anında başvurun.</p>
+        </div>
+    </div>
+</section>

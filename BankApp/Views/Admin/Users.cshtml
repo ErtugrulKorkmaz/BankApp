@@ -1,0 +1,28 @@
+@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Users";
+}
+<h2>Users</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.FullName</td>
+            <td>@u.Email</td>
+            <td>
+                <a class="btn btn-sm btn-outline-primary" href="@Url.Action("UserDetails", new { id = u.Id })">Details</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+

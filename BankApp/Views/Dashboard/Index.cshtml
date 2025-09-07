@@ -1,0 +1,43 @@
+@model IEnumerable<BankApp.Models.Transaction>
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <strong>Account Number:</strong> @ViewBag.AccountNumber
+            </div>
+            <div class="col-md-6">
+                <strong>Balance:</strong> @string.Format("{0:C}", ViewBag.Balance)
+            </div>
+        </div>
+    </div>
+ </div>
+
+<h4>Recent Transactions</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var t in Model)
+    {
+        <tr>
+            <td>@t.Date.ToLocalTime().ToString("g")</td>
+            <td>@t.Type</td>
+            <td>@string.Format("{0:C}", t.Amount)</td>
+            <td>@t.Description</td>
+        </tr>
+    }
+    </tbody>
+ </table>
+
+

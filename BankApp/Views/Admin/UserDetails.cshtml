@@ -1,0 +1,28 @@
+@model BankApp.Models.ApplicationUser
+@{
+    ViewData["Title"] = "User Details";
+}
+<h2>User Details</h2>
+<div class="card mb-3">
+    <div class="card-body">
+        <div><strong>Full Name:</strong> @Model.FullName</div>
+        <div><strong>Email:</strong> @Model.Email</div>
+    </div>
+</div>
+
+<h4>Bank Account</h4>
+@if (Model.BankAccount != null)
+{
+    <div class="card">
+        <div class="card-body">
+            <div><strong>Account Number:</strong> @Model.BankAccount.AccountNumber</div>
+            <div><strong>Balance:</strong> @string.Format("{0:C}", Model.BankAccount.Balance)</div>
+        </div>
+    </div>
+}
+else
+{
+    <p>No bank account created yet.</p>
+}
+
+
